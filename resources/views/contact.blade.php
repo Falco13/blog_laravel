@@ -4,7 +4,7 @@
 @section('main_content')
 
 <h1>Page Contact in developing now...</h1><br>
-<form action="contact/submit" method="post">
+<form action="{{ route('contact-form') }}" method="post">
     @csrf
     <div class="form-group">
         <input type="text" name="name" id="name" placeholder="Your name" class="form-control"><br>
