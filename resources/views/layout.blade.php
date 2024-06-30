@@ -24,8 +24,16 @@
     </div>
 </nav>
 
-<div class="container">
-    @yield('main_content')
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-8">
+            @yield('main_content')
+        </div>
+        <div class="col-4">
+            @include('inc.sidebar')
+        </div>
+    @include('inc.footer')
+    </div>
 </div>
 
 </body>
