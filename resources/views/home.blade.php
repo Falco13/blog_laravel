@@ -9,5 +9,5 @@
 
 @section('sidebar')
     @parent
-    <p>simple text</p>
+    <p>+ simple text</p>
 @endsection
