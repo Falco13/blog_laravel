@@ -18,4 +18,11 @@ class ContactController extends Controller
 
         return redirect()->route('home')->with('success', 'Thank you for your message!');
     }
+
+    public function all_contacts() {
+        //$contact = new Contact();
+        //$contact->all();
+        $contacts = Contact::all();
+        return view('all_contacts', ['contact_list' => $contacts]);
+    }
 }
