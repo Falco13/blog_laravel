@@ -25,6 +25,7 @@
 </nav>
 
 <div class="container mt-3">
+    @include('inc.messages')
     <div class="row">
         <div class="col-8">
             @yield('main_content')
