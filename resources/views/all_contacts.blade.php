@@ -9,7 +9,7 @@
         <h3>{{ $contact->subject }}</h3>
         <p>{{ $contact->email }}</p>
         <p><small>{{ $contact->created_at }}</small></p>
-        <a href=""><button class="btn btn-danger">Read...</button></a>
+        <a href="{{ route('detail_message') }}"><button class="btn btn-danger">Read...</button></a>
     </div>
 @endforeach
 
