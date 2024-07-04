@@ -9,6 +9,7 @@
         <p>{{ $contact_one->email }}</p>
         <p><small>{{ $contact_one->created_at }}</small></p>
         <a href="{{ route('update_message', $contact_one->id) }}"><button class="btn btn-warning">Edit</button></a>
+        <a href="{{ route('delete_message', $contact_one->id) }}"><button class="btn btn-danger">Delete</button></a>
     </div>
 
 @endsection

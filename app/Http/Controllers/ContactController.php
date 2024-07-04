@@ -46,4 +46,9 @@ class ContactController extends Controller
 
         return redirect()->route('detail_message', $id)->with('success', 'Thank you for your update!');
     }
+
+    public function delete_message($id) {
+        Contact::find($id)->delete();
+        return redirect()->route('all_contacts')->with('success', 'Your message has been deleted!');
+    }
 }
