@@ -25,4 +25,9 @@ class ContactController extends Controller
         $contacts = Contact::all();
         return view('all_contacts', ['contact_list' => $contacts]);
     }
+
+    public function detail_message($id) {
+        $contact = new Contact();
+        return view('detail_message', ['contact_one' => $contact->find($id)]);
+    }
 }
