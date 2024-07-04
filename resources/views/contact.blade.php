@@ -3,7 +3,7 @@
 @section('title') Contact @endsection
 @section('main_content')
 
-<h1>Page Contact in developing now...</h1><br>
+<h1>Contact...</h1><br>
 
 <form action="{{ route('contact-form') }}" method="post">
     @csrf

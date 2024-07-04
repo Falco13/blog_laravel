@@ -19,3 +19,5 @@ Route::post('contact/submit', [ContactController::class, 'submit'])->name('conta
 
 Route::get('contact/all', [ContactController::class, 'all_contacts'])->name('all_contacts');
 Route::get('contact/{id}', [ContactController::class, 'detail_message'])->name('detail_message');
+Route::get('contact/{id}/update', [ContactController::class, 'update_message'])->name('update_message');
+Route::post('contact/{id}/update', [ContactController::class, 'update_message_submit'])->name('update_message_submit');

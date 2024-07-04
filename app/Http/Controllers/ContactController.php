@@ -30,4 +30,20 @@ class ContactController extends Controller
         $contact = new Contact();
         return view('detail_message', ['contact_one' => $contact->find($id)]);
     }
+
+    public function update_message($id) {
+        $contact = new Contact();
+        return view('update_message', ['contact_one' => $contact->find($id)]);
+    }
+
+    public function update_message_submit($id, Request $req) {
+        $contact = Contact::find($id);
+        $contact->name = $req->input('name');
+        $contact->email = $req->input('email');
+        $contact->subject = $req->input('subject');
+        $contact->message = $req->input('message');
+        $contact->save();
+
+        return redirect()->route('detail_message', $id)->with('success', 'Thank you for your update!');
+    }
 }

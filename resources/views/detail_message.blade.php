@@ -8,7 +8,7 @@
         <h3>{{ $contact_one->message }}</h3>
         <p>{{ $contact_one->email }}</p>
         <p><small>{{ $contact_one->created_at }}</small></p>
-        <a href="{{ route('detail_message', $contact_one->id) }}"><button class="btn btn-danger">Read...</button></a>
+        <a href="{{ route('update_message', $contact_one->id) }}"><button class="btn btn-warning">Edit</button></a>
     </div>
 
 @endsection
